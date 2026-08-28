@@ -1,15 +1,30 @@
+HTML
 <!DOCTYPE html>
 <html>
     <head>
         <title>Youtube.com clone</title>
         <style>
+            body {
+                font-family: Arial, sans-serif;
+                margin: 20px;
+                display: flex;
+                flex-wrap: wrap;
+            }
+
+            .main-content {
+                flex: 1;
+                min-width: 600px;
+            }
+
             .thumbnail{
                 width: 300px;
                 margin-bottom: 12px;
             }
             .search-bar{
                 display: block;
-
+                margin-bottom: 20px;
+                padding: 8px;
+                width: 300px;
             }
             .video-preview{
                 width: 300px;
@@ -36,59 +51,160 @@
             .video-title{
                 margin-top: 0px;
             }
+
+            /* Styled Game Section on Right Side */
+            .game-container {
+                width: 280px;
+                padding: 24px;
+                background-color: #f9f9f9;
+                border: 2px solid #e0e0e0;
+                border-radius: 12px;
+                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+                text-align: center;
+                align-self: flex-start;
+                margin-top: 20px;
+            }
+
+            .game-title {
+                font-size: 22px;
+                font-weight: bold;
+                margin-bottom: 20px;
+                color: #333;
+            }
+
+            .game-btn {
+                display: block;
+                width: 100%;
+                padding: 14px 0;
+                margin-bottom: 12px;
+                font-size: 18px;
+                font-weight: bold;
+                color: white;
+                background-color: #ff0000;
+                border: none;
+                border-radius: 8px;
+                cursor: pointer;
+                transition: background-color 0.2s, transform 0.1s;
+            }
+
+            .game-btn:hover {
+                background-color: #cc0000;
+                transform: translateY(-2px);
+            }
+
+            .game-btn:active {
+                transform: translateY(0);
+            }
         </style>
     </head>
     <body>
-        <div class="header">
-            <input class="search-bar" 
-        type="text" placeholder="search">
-        </div>
-        <div class="video-preview">
-            <div> 
-                <img class = "thumbnail"
-        src = "thumbnails/pirrates wallpaper.jpeg">
+        <div class="main-content">
+            <div class="header">
+                <input class="search-bar" type="text" placeholder="search">
             </div>
-            <div>
-                <div class="profilephoto1">
-                    <img class = "profile1"
-                    src = "channel-profile/profile photo.jpg">
+
+            <div class="video-preview">
+                <div> 
+                    <img class="thumbnail" src="thumbnails/WhatsApp Image 2026-07-12 at 7.42.22 PM.jpeg">
                 </div>
-                <div class="video-info">
-                    <p class="video-title">
-            Talking Tech and AI with
-            Google CEO Sundar Pachai!
-        </p>
-        <p class="video-author">
-            Marques brownlee
-        </p>
-        <p class="video-stats">
-            3.4M views &#183; 6 months ago;
-        </p>
-    </div>
-</div>
+                <div>
+                    <div class="profilephoto1">
+                        <img class="profile1" src="channel-profile/profile photo.jpg">
+                    </div>
+                    <div class="video-info">
+                        <p class="video-title">i am a student of skf college at mankundu.</p>
+                        <p class="video-author">Oahida Rahaman</p>
+                        <p class="video-stats">3.4M views &#183; 6 months ago</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="video-preview">
+                <img class="thumbnail-2" src="thumbnails/WhatsApp Image 2026-06-28 at 1.09.01 AM.jpeg">
+                <p class="video-title">I am Rupam Malick</p>
+                <p class="video-author">3rd year student of national institue electronics and information technology GKP</p>
+                <p class="video-stats">welcome to the page of Rupam and Nitu</p>
+            </div>
+
+            <p>hello this is nitu just learning website</p>
+            <p>welcome to my website</p>
+            <p>how are you</p>
         </div>
 
-        <div class="video-preview">
-             <img class = "thumbnail-2"
-        src = "thumbnails/st things poster.jpg">
+        <div class="game-container">
+            <p class="game-title">Rock Paper Scissors</p>
+            
+            <button class="game-btn" onclick="
+                const randNum = Math.random();
+                let compMove = '';
 
-        <p class="video-title">
-            Try not to laugh #9
-        </p>
-        <p class="video-author">
-            Markiplier
-        </p>
-        <p class="video-stats">
-            19M views &#183; 4 years ago
-        </p>
+                if(randNum >= 0 && randNum < 1/3){
+                    compMove = 'rock';
+                } else if(randNum >= 1/3 && randNum < 2/3){
+                    compMove = 'paper';
+                } else if(randNum >= 2/3 && randNum < 1){
+                    compMove = 'scissors';
+                }
+
+                let result = '';
+                if(compMove === 'rock'){
+                    result = 'Tie...';
+                } else if(compMove === 'paper'){
+                    result = 'you lose...';
+                } else if(compMove === 'scissors'){
+                    result = 'you win...';
+                }
+
+                alert(`You picked rock. Computer picked ${compMove}. ${result}`);
+            ">✊ Rock</button>
+
+            <button class="game-btn" onclick="
+                const randNum = Math.random();
+                let compMove = '';
+
+                if(randNum >= 0 && randNum < 1/3){
+                    compMove = 'rock';
+                } else if(randNum >= 1/3 && randNum < 2/3){
+                    compMove = 'paper';
+                } else if(randNum >= 2/3 && randNum < 1){
+                    compMove = 'scissors';
+                }
+
+                let result = '';
+                if(compMove === 'rock'){
+                    result = 'you win...';
+                } else if(compMove === 'paper'){
+                    result = 'Tie...';
+                } else if(compMove === 'scissors'){
+                    result = 'you lose...';
+                }
+
+                alert(`You picked paper. Computer picked ${compMove}. ${result}`);
+            ">✋ Paper</button>
+
+            <button class="game-btn" onclick="
+                const randNum = Math.random();
+                let compMove = '';
+
+                if(randNum >= 0 && randNum < 1/3){
+                    compMove = 'rock';
+                } else if(randNum >= 1/3 && randNum < 2/3){
+                    compMove = 'paper';
+                } else if(randNum >= 2/3 && randNum < 1){
+                    compMove = 'scissors';
+                }
+
+                let result = '';
+                if(compMove === 'rock'){
+                    result = 'you lose...';
+                } else if(compMove === 'paper'){
+                    result = 'you win...';
+                } else if(compMove === 'scissors'){
+                    result = 'Tie...';
+                }
+
+                alert(`You picked scissors. Computer picked ${compMove}. ${result}`);
+            ">✌️ Scissors</button>
         </div>
-        <p>
-            hello this is Rupam
-        </p>
-        <p>
-            welcome to my website
-        </p>
-        <p> how are you </p>
-
     </body>
 </html>
