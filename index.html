@@ -1,210 +1,193 @@
-HTML
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Youtube.com clone</title>
-        <style>
-            body {
-                font-family: Arial, sans-serif;
-                margin: 20px;
-                display: flex;
-                flex-wrap: wrap;
-            }
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Under Construction</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-            .main-content {
-                flex: 1;
-                min-width: 600px;
-            }
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: #0f172a;
+      color: #f8fafc;
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px;
+    }
 
-            .thumbnail{
-                width: 300px;
-                margin-bottom: 12px;
-            }
-            .search-bar{
-                display: block;
-                margin-bottom: 20px;
-                padding: 8px;
-                width: 300px;
-            }
-            .video-preview{
-                width: 300px;
-                display: inline-block;
-                vertical-align: top;
-                margin-right: 15px;
-            }
-            .thumbnail-2{
-                width: 300px;
-            }
-            .profilephoto1{
-                vertical-align: top;
-                display: inline-block;
-                width: 50px;
-            }
-            .video-info{
-                display: inline-block;
-                width: 200px;
-            }
-            .profile1{
-                width: 50px;
-                border-radius: 50px;
-            }
-            .video-title{
-                margin-top: 0px;
-            }
+    .container {
+      background: #1e293b;
+      border: 1px solid #334155;
+      border-radius: 16px;
+      padding: 48px 32px;
+      max-width: 600px;
+      width: 100%;
+      text-align: center;
+      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+    }
 
-            /* Styled Game Section on Right Side */
-            .game-container {
-                width: 280px;
-                padding: 24px;
-                background-color: #f9f9f9;
-                border: 2px solid #e0e0e0;
-                border-radius: 12px;
-                box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
-                text-align: center;
-                align-self: flex-start;
-                margin-top: 20px;
-            }
+    .badge {
+      display: inline-block;
+      background: #f59e0b;
+      color: #0f172a;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 6px 14px;
+      border-radius: 9999px;
+      margin-bottom: 20px;
+    }
 
-            .game-title {
-                font-size: 22px;
-                font-weight: bold;
-                margin-bottom: 20px;
-                color: #333;
-            }
+    h1 {
+      font-size: 2.25rem;
+      font-weight: 800;
+      margin-bottom: 12px;
+      color: #ffffff;
+    }
 
-            .game-btn {
-                display: block;
-                width: 100%;
-                padding: 14px 0;
-                margin-bottom: 12px;
-                font-size: 18px;
-                font-weight: bold;
-                color: white;
-                background-color: #ff0000;
-                border: none;
-                border-radius: 8px;
-                cursor: pointer;
-                transition: background-color 0.2s, transform 0.1s;
-            }
+    p {
+      color: #94a3b8;
+      font-size: 1rem;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
 
-            .game-btn:hover {
-                background-color: #cc0000;
-                transform: translateY(-2px);
-            }
+    .progress-bar-container {
+      background: #334155;
+      border-radius: 9999px;
+      height: 10px;
+      overflow: hidden;
+      margin-bottom: 32px;
+    }
 
-            .game-btn:active {
-                transform: translateY(0);
-            }
-        </style>
-    </head>
-    <body>
-        <div class="main-content">
-            <div class="header">
-                <input class="search-bar" type="text" placeholder="search">
-            </div>
+    .progress-bar {
+      width: 70%;
+      height: 100%;
+      background: linear-gradient(90deg, #38bdf8, #818cf8);
+      border-radius: 9999px;
+      animation: pulse 2s infinite ease-in-out;
+    }
 
-            <div class="video-preview">
-                <div> 
-                    <img class="thumbnail" src="thumbnails/WhatsApp Image 2026-07-12 at 7.42.22 PM.jpeg">
-                </div>
-                <div>
-                    <div class="profilephoto1">
-                        <img class="profile1" src="channel-profile/profile photo.jpg">
-                    </div>
-                    <div class="video-info">
-                        <p class="video-title">i am a student of skf college at mankundu.</p>
-                        <p class="video-author">Oahida Rahaman</p>
-                        <p class="video-stats">3.4M views &#183; 6 months ago</p>
-                    </div>
-                </div>
-            </div>
+    .countdown {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 12px;
+      margin-bottom: 32px;
+    }
 
-            <div class="video-preview">
-                <img class="thumbnail-2" src="thumbnails/WhatsApp Image 2026-06-28 at 1.09.01 AM.jpeg">
-                <p class="video-title">I am Rupam Malick</p>
-                <p class="video-author">3rd year student of national institue electronics and information technology GKP</p>
-                <p class="video-stats">welcome to the page of Rupam and Nitu</p>
-            </div>
+    .time-box {
+      background: #0f172a;
+      border: 1px solid #334155;
+      border-radius: 10px;
+      padding: 12px 8px;
+    }
 
-            <p>hello this is nitu just learning website</p>
-            <p>welcome to my website</p>
-            <p>how are you</p>
-        </div>
+    .time-val {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #38bdf8;
+    }
 
-        <div class="game-container">
-            <p class="game-title">Rock Paper Scissors</p>
-            
-            <button class="game-btn" onclick="
-                const randNum = Math.random();
-                let compMove = '';
+    .time-label {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      color: #64748b;
+      margin-top: 4px;
+    }
 
-                if(randNum >= 0 && randNum < 1/3){
-                    compMove = 'rock';
-                } else if(randNum >= 1/3 && randNum < 2/3){
-                    compMove = 'paper';
-                } else if(randNum >= 2/3 && randNum < 1){
-                    compMove = 'scissors';
-                }
+    .contact {
+      font-size: 0.9rem;
+      color: #64748b;
+    }
 
-                let result = '';
-                if(compMove === 'rock'){
-                    result = 'Tie...';
-                } else if(compMove === 'paper'){
-                    result = 'you lose...';
-                } else if(compMove === 'scissors'){
-                    result = 'you win...';
-                }
+    .contact a {
+      color: #38bdf8;
+      text-decoration: none;
+    }
 
-                alert(`You picked rock. Computer picked ${compMove}. ${result}`);
-            ">✊ Rock</button>
+    .contact a:hover {
+      text-decoration: underline;
+    }
 
-            <button class="game-btn" onclick="
-                const randNum = Math.random();
-                let compMove = '';
+    @keyframes pulse {
+      0%, 100% { opacity: 0.8; }
+      50% { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
 
-                if(randNum >= 0 && randNum < 1/3){
-                    compMove = 'rock';
-                } else if(randNum >= 1/3 && randNum < 2/3){
-                    compMove = 'paper';
-                } else if(randNum >= 2/3 && randNum < 1){
-                    compMove = 'scissors';
-                }
+  <main class="container">
+    <span class="badge">Maintenance Mode</span>
+    <h1>We're Rebuilding</h1>
+    <p>We are currently fine-tuning our code, improving design, and preparing exciting updates. We will be back shortly!</p>
 
-                let result = '';
-                if(compMove === 'rock'){
-                    result = 'you win...';
-                } else if(compMove === 'paper'){
-                    result = 'Tie...';
-                } else if(compMove === 'scissors'){
-                    result = 'you lose...';
-                }
+    <div class="progress-bar-container">
+      <div class="progress-bar"></div>
+    </div>
 
-                alert(`You picked paper. Computer picked ${compMove}. ${result}`);
-            ">✋ Paper</button>
+    <div class="countdown">
+      <div class="time-box">
+        <div class="time-val" id="days">00</div>
+        <div class="time-label">Days</div>
+      </div>
+      <div class="time-box">
+        <div class="time-val" id="hours">00</div>
+        <div class="time-label">Hours</div>
+      </div>
+      <div class="time-box">
+        <div class="time-val" id="minutes">00</div>
+        <div class="time-label">Mins</div>
+      </div>
+      <div class="time-box">
+        <div class="time-val" id="seconds">00</div>
+        <div class="time-label">Secs</div>
+      </div>
+    </div>
 
-            <button class="game-btn" onclick="
-                const randNum = Math.random();
-                let compMove = '';
+    <div class="contact">
+      Need urgent support? Reach us at <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a>
+    </div>
+  </main>
 
-                if(randNum >= 0 && randNum < 1/3){
-                    compMove = 'rock';
-                } else if(randNum >= 1/3 && randNum < 2/3){
-                    compMove = 'paper';
-                } else if(randNum >= 2/3 && randNum < 1){
-                    compMove = 'scissors';
-                }
+  <script>
+    // Set target date to 5 days from now (adjust as needed)
+    const targetDate = new Date();
+    targetDate.setDate(targetDate.getDate() + 5);
 
-                let result = '';
-                if(compMove === 'rock'){
-                    result = 'you lose...';
-                } else if(compMove === 'paper'){
-                    result = 'you win...';
-                } else if(compMove === 'scissors'){
-                    result = 'Tie...';
-                }
+    function updateCountdown() {
+      const now = new Date().getTime();
+      const difference = targetDate - now;
 
-                alert(`You picked scissors. Computer picked ${compMove}. ${result}`);
-            ">✌️ Scissors</button>
-        </div>
-    </body>
+      if (difference <= 0) {
+        document.getElementById("days").innerText = "00";
+        document.getElementById("hours").innerText = "00";
+        document.getElementById("minutes").innerText = "00";
+        document.getElementById("seconds").innerText = "00";
+        return;
+      }
+
+      const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((difference % (1000 * 60)) / 1000);
+
+      document.getElementById("days").innerText = String(days).padStart(2, "0");
+      document.getElementById("hours").innerText = String(hours).padStart(2, "0");
+      document.getElementById("minutes").innerText = String(minutes).padStart(2, "0");
+      document.getElementById("seconds").innerText = String(seconds).padStart(2, "0");
+    }
+
+    setInterval(updateCountdown, 1000);
+    updateCountdown();
+  </script>
+</body>
 </html>
