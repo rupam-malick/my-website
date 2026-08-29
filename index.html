@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Under Construction</title>
+  <title>Oops! Website Under Construction</title>
   <style>
     * {
       box-sizing: border-box;
@@ -13,8 +13,9 @@
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-      background: #0f172a;
-      color: #f8fafc;
+      /* Use a calm, light blue derived from the image */
+      background: #c3dafb;
+      color: #0f172a;
       min-height: 100vh;
       display: flex;
       align-items: center;
@@ -23,57 +24,32 @@
     }
 
     .container {
-      background: #1e293b;
-      border: 1px solid #334155;
-      border-radius: 16px;
-      padding: 48px 32px;
-      max-width: 600px;
+      background: #ffffff;
+      border-radius: 20px;
+      padding: 40px;
+      max-width: 650px; /* Slightly wider to match image aspect */
       width: 100%;
       text-align: center;
-      box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     }
 
-    .badge {
-      display: inline-block;
-      background: #f59e0b;
-      color: #0f172a;
-      font-weight: 700;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.08em;
-      padding: 6px 14px;
-      border-radius: 9999px;
-      margin-bottom: 20px;
+    /* Construction Image Styling */
+    .constuction-graphic {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 30px;
+      border-radius: 12px;
+      display: block; /* Center within the flex parent if needed */
+      margin-left: auto;
+      margin-right: auto;
     }
 
-    h1 {
-      font-size: 2.25rem;
-      font-weight: 800;
-      margin-bottom: 12px;
-      color: #ffffff;
-    }
-
-    p {
-      color: #94a3b8;
+    p.main-desc {
+      color: #64748b;
       font-size: 1rem;
       line-height: 1.6;
-      margin-bottom: 28px;
-    }
-
-    .progress-bar-container {
-      background: #334155;
-      border-radius: 9999px;
-      height: 10px;
-      overflow: hidden;
       margin-bottom: 32px;
-    }
-
-    .progress-bar {
-      width: 70%;
-      height: 100%;
-      background: linear-gradient(90deg, #38bdf8, #818cf8);
-      border-radius: 9999px;
-      animation: pulse 2s infinite ease-in-out;
+      font-weight: 500; /* For clarity */
     }
 
     .countdown {
@@ -84,55 +60,50 @@
     }
 
     .time-box {
-      background: #0f172a;
-      border: 1px solid #334155;
-      border-radius: 10px;
-      padding: 12px 8px;
+      /* Deep slate color for contrast against white card */
+      background: #1e293b;
+      border-radius: 12px;
+      padding: 16px 8px;
     }
 
     .time-val {
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: #38bdf8;
+      font-size: 1.75rem;
+      font-weight: 800;
+      /* Orange accent from the image cones */
+      color: #f97316;
     }
 
     .time-label {
-      font-size: 0.75rem;
+      font-size: 0.8rem;
       text-transform: uppercase;
-      color: #64748b;
-      margin-top: 4px;
+      letter-spacing: 0.05em;
+      color: #cbd5e1;
+      margin-top: 6px;
     }
 
     .contact {
-      font-size: 0.9rem;
-      color: #64748b;
+      font-size: 0.95rem;
+      color: #94a3b8;
     }
 
     .contact a {
-      color: #38bdf8;
+      color: #f97316; /* matching orange */
       text-decoration: none;
+      font-weight: 600;
     }
 
     .contact a:hover {
       text-decoration: underline;
-    }
-
-    @keyframes pulse {
-      0%, 100% { opacity: 0.8; }
-      50% { opacity: 1; }
     }
   </style>
 </head>
 <body>
 
   <main class="container">
-    <span class="badge">Maintenance Mode</span>
-    <h1>We're Rebuilding</h1>
-    <p>We are currently fine-tuning our code, improving design, and preparing exciting updates. We will be back shortly!</p>
-
-    <div class="progress-bar-container">
-      <div class="progress-bar"></div>
-    </div>
+    <!-- Image integration -->
+    <img src="thumbnails/construction-landing-page-template_23-2148170362.avif" alt="Adorable kittens at an 'OOPS! Website Under Construction' site." class="constuction-graphic">
+    
+    <p class="main-desc">Our team (seen above) is working hard on exciting updates. We are fine-tuning our code and preparing to launch. We will be back shortly!</p>
 
     <div class="countdown">
       <div class="time-box">
@@ -154,12 +125,12 @@
     </div>
 
     <div class="contact">
-      Need urgent support? Reach us at <a href="mailto:contact@yourdomain.com">contact@yourdomain.com</a>
+      Questions? Reach us at <a href="https://discord.gg/QxgEvTy2M">Lord_Rupam.com</a>
     </div>
   </main>
 
   <script>
-    // Set target date to 5 days from now (adjust as needed)
+    // Target date set to 5 days from now
     const targetDate = new Date();
     targetDate.setDate(targetDate.getDate() + 5);
 
@@ -172,6 +143,7 @@
         document.getElementById("hours").innerText = "00";
         document.getElementById("minutes").innerText = "00";
         document.getElementById("seconds").innerText = "00";
+        // Optionally add back-online logic here
         return;
       }
 
